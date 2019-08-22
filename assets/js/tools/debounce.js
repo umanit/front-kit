@@ -6,7 +6,7 @@
  * window.addEventListener("scroll", debounce(fonction));
  ********************************************************************************/
 
-function debounce(func, wait = 20, immediate = true) {
+export default function debounce(func, wait = 20, immediate = true) {
     var timeout;
     return function() {
         var context = this, args = arguments;
@@ -20,4 +20,5 @@ function debounce(func, wait = 20, immediate = true) {
         if (callNow) func.apply(context, args);
     };
 }
+
 

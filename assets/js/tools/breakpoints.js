@@ -16,6 +16,8 @@ const breakpoints = {
     lg: 1200
 };
 
-let isMobile = window.innerWidth < breakpoints.sm;
-let isTablet = window.innerWidth > breakpoints.sm && window.innerWidth < breakpoints.md ;
-let isDesktop = window.innerWidth >= breakpoints.md;
+breakpoints.isMobile = () => window.innerWidth < breakpoints.sm;
+breakpoints.isTablet = () => window.innerWidth > breakpoints.sm && window.innerWidth < breakpoints.md;
+breakpoints.isDesktop = () => window.innerWidth >= breakpoints.md;
+
+export default breakpoints;

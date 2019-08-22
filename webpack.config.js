@@ -14,7 +14,7 @@ Encore
 
 // Ajout des entrées JS dynamiquement
 let entryArray = glob.sync(
-    assetPath + '/js/**/*.js'
+    assetPath + '/js/{*.js,!(tools)/**/*.js}'
 );
 
 for (let x in entryArray) {
@@ -23,8 +23,9 @@ for (let x in entryArray) {
 }
 
 Encore
-// When enabled, Webpack "splits" your files into smaller pieces for greater optimization.
-    .splitEntryChunks()
+    // When enabled, Webpack "splits" your files into smaller pieces for greater optimization.
+    // in symfony uncomment this and use encore_entry_script_tags
+    // .splitEntryChunks()
 
     // will require an extra scrip t tag for runtime.js
     // but, you probably want this, unless you're building a single-page app
