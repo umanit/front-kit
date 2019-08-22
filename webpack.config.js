@@ -70,6 +70,25 @@ Encore
     // uncomment if you're having problems with a jQuery plugin
     //.autoProvidejQuery()
 
+    // uncomment this in symfony 4 environnement
+    // .addPlugin(new PurgeCssPlugin({
+    //     paths: glob.sync([
+    //             path.join(__dirname, 'templates/**/*.html.twig'),
+    //             assetPath + '/js/**/*.js'
+    //         ]
+    //     ),
+    //     extractors: [
+    //         {
+    //             extractor: class {
+    //                 static extract(content) {
+    //                     return content.match(/[A-z0-9-:\/]+/g) || []
+    //                 }
+    //             },
+    //             extensions: ['twig','js'],
+    //         }
+    //     ],
+    //     whitelistPatterns: [/slick/,/slabtext/,/lity/,/select2/]
+    // }))
 
 ;
 
