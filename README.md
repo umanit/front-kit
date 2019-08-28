@@ -41,12 +41,13 @@ Utilisation
 
 L'installation va créer à la racine du projet un dossier assets 
 
+```
 scss -> les fichiers styles
 fav -> les favicons
 fonts -> les polices du site
 images -> les images du site
 js -> les fichiers javascript du site
-
+```
 
 Le fichier app.js possède un exemple d'utilisation 
 
