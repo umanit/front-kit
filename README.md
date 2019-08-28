@@ -51,4 +51,20 @@ js -> les fichiers javascript du site
 
 Le fichier app.js possède un exemple d'utilisation 
 
+Pour compiler les assets du site : 
 
+```
+docker-compose exec node yarn run dev
+```
+
+Pour compiler et ecouter les assets du site : 
+
+```
+docker-compose exec node yarn run watch
+```
+
+Pour compiler les assets pour la prod
+
+```
+docker-compose exec node yarn build
+```
