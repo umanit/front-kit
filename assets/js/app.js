@@ -1,4 +1,4 @@
-/* Exemple usage on librairies Delete this on projet */
+/* Exemple usage on librairies Delete this on project */
 
 import breakpoints from './tools/breakpoints';
 import debounce from './tools/debounce';

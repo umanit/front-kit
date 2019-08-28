@@ -6,7 +6,7 @@ init-front :
 	wget -P temp "https://github.com/umanit/front-kit/archive/master.zip"
 	unzip temp/master.zip
 	mv -r temp/assets ../
-	mv temp/package.json ../
+	mv -n temp/package.json ../
 	mv temp/webpack.config.js ../
 	mv -n temp/.editorconfig ../
 	$(EXEC) node yarn install
