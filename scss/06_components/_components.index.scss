@@ -1,0 +1,31 @@
+// ==========================================================================
+// Components
+// ==========================================================================
+
+/**
+ * This is where majority of the work takes place. All components are very encapsulated
+ * and of course try to avoid any dependencies between components.
+ *
+ * Classes in this layer are prefix with `c-`.
+ */
+
+/**
+ * CONTENTS
+ *
+ * COMPONENTS
+ * Buttons...............Define all buttons styles.
+ * Forms.................Define specific forms styles.
+ * Footer................Define footer style.
+ * Header................Define header styles.
+ * Links.................Define specific links styles.
+ * Navigation............Define all navigation styles.
+ * Wysiwyg...............Set up all styles within a wysiwyg.
+ */
+
+@import "components.buttons";
+@import "components.forms";
+@import "components.footer";
+@import "components.header";
+@import "components.links";
+@import "components.navigation";
+@import "components.wysiwyg";

@@ -1,0 +1,37 @@
+// ==========================================================================
+// Settings - Colors
+// ==========================================================================
+
+$white: hsl(0, 0, 100%);
+$black: hsl(0, 0, 0);
+
+/** Examples **/
+//$gold: hsl(39, 74%, 41%);
+//$light-grey: hsla(191, 35%, 37%, 0.05);
+
+/*----------  Theme color variables  ----------*/
+/** Examples **/
+//$primary: $black;
+//$secondary: $gold;
+
+
+// ==========================================================================
+// Bootstrap overrides
+// ==========================================================================
+$body-bg: $white; // body background-color//
+$body-color: $black; // body font color
+
+
+// ==========================================================================
+// Useful for color mixin
+// ==========================================================================
+// With these declared colors, a Bootstrap mixin creates automatically helper classes and :root variables.
+// Usage: `<div class="text-gold bg-light-grey">`
+
+$colors: ();
+$colors: (
+  //'white': $white,
+  //'black': $black,
+  //'gold': $gold,
+  //'light-grey': $light-grey,
+);

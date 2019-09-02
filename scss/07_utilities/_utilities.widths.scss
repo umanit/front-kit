@@ -1,0 +1,37 @@
+// ==========================================================================
+// Utilities - Widths
+// ==========================================================================
+
+/*
+ * Useful classes for widths, taking account media queries.
+ * ex: `.u-w-25` (width of 25%), `.u-w-md-50` (width of 50%, within md media-query),
+*/
+.u-w-auto {
+  width: auto !important;
+}
+
+$i: 0;
+@while $i <= 100 {
+  $unit: $i*0.01;
+  .u-w-#{$i} { width: percentage($unit) !important; }
+  $i: $i + 5;
+}
+
+
+// ==========================================================================
+// Media Queries
+// ==========================================================================
+
+@each $media-query in $media-queries{
+
+  @include media-breakpoint-up(#{$media-query}){
+
+    $i: 0;
+    @while $i <= 100 {
+      $unit: $i*0.01;
+      .u-w-#{$media-query}-#{$i} { width: percentage($unit) !important; }
+      $i: $i + 5;
+    }
+  }
+
+}

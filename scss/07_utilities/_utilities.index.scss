@@ -1,0 +1,24 @@
+// ==========================================================================
+// Utilities
+// ==========================================================================
+
+/**
+ * Utilities and helper classes with ability to override
+ * anything which goes before in the triangle of ITCSS.
+ * The utilities are made immutable with `!important`.
+ * It’s important not to output any CSS in this layers.
+ *
+ * Classes in this layer are prefix with `u-`.
+ */
+
+/**
+ * CONTENTS
+ *
+ * UTILITIES
+ * Fonts................font family utilities
+ * Spacing..............Margin/padding utilities classes
+ * Width................Width utilities classes
+ */
+@import "utilities.fonts";
+@import "utilities.spacings";
+@import "utilities.widths";

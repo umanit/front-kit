@@ -1,0 +1,46 @@
+// ==========================================================================
+// Framework
+// ==========================================================================
+
+// Option 1: Include full Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+// Option 2: Include only parts of Bootstrap
+// @link https://getbootstrap.com/docs/4.1/getting-started/theming/
+
+
+// ==========================================================================
+// Project libraries
+// ==========================================================================
+
+/**
+  * 1. Select2 (custom form selects)
+  * 2. Name of external library (description of library)
+ */
+//@import "~select2/dist/css/select2.min.css"; /* 3 */
+
+
+// ==========================================================================
+// Style of the app
+// ==========================================================================
+
+/* Settings layer */
+@import "01_settings/settings.index";
+
+/* Tools layer */
+@import "02_tools/tools.index";
+
+/* Generic layer */
+@import "03_generic/generic.index";
+
+/* Elements layer */
+@import "04_elements/elements.index";
+
+/* Object index */
+@import "05_objects/objects.index";
+
+/* Components index */
+@import "06_components/components.index";
+
+/* Utilities index */
+@import "07_utilities/utilities.index";

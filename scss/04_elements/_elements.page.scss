@@ -1,0 +1,14 @@
+// ==========================================================================
+// Elements - Page
+// ==========================================================================
+
+/*
+ * Set the default body styles to inherit.
+ */
+body {
+  color: $body-color;
+  background-color: $body-bg;
+
+  /** example **/
+  //font-family: $barlow-extralight;
+}

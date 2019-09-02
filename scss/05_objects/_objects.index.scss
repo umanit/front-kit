@@ -1,0 +1,19 @@
+// ==========================================================================
+// Objects
+// ==========================================================================
+
+/**
+ * The object layer class-based selectors defines undecorated elements with agnostic names.
+ * It is more relative to structure/position/behaviour of elements within the template (wrappers, grid, list, etc.)
+ * than to their style (which is defined in 06_components).
+ *
+ * Classes in this layer are prefixed with `o-`.
+ */
+
+/**
+ * CONTENTS
+ *
+ * OBJECTS
+ * Section...............Define sections styles.
+ */
+@import "objects.section";

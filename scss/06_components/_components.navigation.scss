@@ -1,0 +1,77 @@
+// ==========================================================================
+// Components - Navigation
+// ==========================================================================
+
+.c-nav {
+
+  //&.is-active {}
+  //&.is-sticky {}
+}
+
+
+.c-nav-primary {}
+.c-nav-primary__container {}
+.c-nav-primary__list {}
+.c-nav-primary__item {}
+
+// Styles par défaut des liens
+.c-nav-primary__link, .c-nav-primary__link:visited {
+  &:hover, &:focus {}
+}
+
+
+// ==========================================================================
+// Nav primary
+// ==========================================================================
+
+.c-nav-primary__lvl-1 {
+
+  // Styles dédiés aux éléments du menu de 1er niveau
+  > .c-nav-primary__item {}
+}
+
+
+// ==========================================================================
+// Nav secondary
+// ==========================================================================
+
+.c-nav-primary__subcontainer {}
+.c-nav-primary__lvl-2 {
+  display: none;
+
+  // Styles dédiés aux liens du sous-menu
+  .c-nav-primary__link, .c-nav-primary__link:visited {
+    &:hover, &:focus {}
+  }
+}
+
+/*----------  Aside  ----------*/
+.c-nav-primary__aside {}
+
+
+// ==========================================================================
+// Etat actif de la navigation
+// ==========================================================================
+
+.c-nav-primary__item {
+
+  &.is-active, &.active {
+    > .c-nav-primary__link, > .c-nav-primary__link:visited {
+      &:hover, &:focus {}
+    }
+  }
+
+  // Affiche le niveau 2
+  &.is-active {
+    .c-nav-primary__lvl-2 { display: block; }
+  }
+}
+
+// ==========================================================================
+// Media Queries
+// ==========================================================================
+
+// Include navigation media queries
+@include media-breakpoint-up(){
+
+}

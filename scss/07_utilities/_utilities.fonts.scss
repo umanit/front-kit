@@ -1,0 +1,29 @@
+// ==========================================================================
+// Utilities - Fonts
+// ==========================================================================
+
+/*
+ * Useful classes for fonts relatives to the project, taking account media queries.
+ * ex: `.u-fs-24` (font-size of 24px), `.u`
+*/
+
+//@each $font-size in $font-sizes{
+//  .u-fs-#{$font-size} {
+//    font-size: rem($font-size) !important;
+//  }
+//}
+
+// ==========================================================================
+// Media Queries
+// ==========================================================================
+
+@each $media-query in $media-queries{
+
+  @include media-breakpoint-up(#{$media-query}){
+
+    @each $font-size in $font-sizes{
+      .u-fs-#{$media-query}-#{$font-size} { font-size: rem($font-size) !important; }
+    }
+  }
+
+}
