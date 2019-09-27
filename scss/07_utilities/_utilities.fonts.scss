@@ -4,8 +4,10 @@
 
 /*
  * Useful classes for fonts relatives to the project, taking account media queries.
- * ex: `.u-fs-24` (font-size of 24px), `.u`
+ * ex: `.u-fs-24` (font-size of 24px), `.u-fs-lg-80` (font-size of 80px, within lg media-query)
 */
+
+/* /!\ Définir $font-sizes dans 01_settings.fonts /!\ */
 
 //@each $font-size in $font-sizes{
 //  .u-fs-#{$font-size} {

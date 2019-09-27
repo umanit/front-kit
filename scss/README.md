@@ -78,7 +78,7 @@ Les classes sont nommées spécifiquement :
 
 * **07_utilities** - Styles les plus spécifiques. Classes utilitaires permettant de remplacer tout ce qui précède. C'est le seul endroit où ```!important``` est autorisé. :-)
 ```
-.one-half {
+.u-one-half {
   width: 50% !important;
 }
 ```
