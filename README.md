@@ -5,7 +5,7 @@ Ce starterkit est à utiliser en cas d'intégration simple. Afin d'avoir une str
 Il ne doit pas être cloné, mais est utlisé pour initier un projet cible. 
 Il s'appuie sur [webpack encore](https://symfony.com/doc/current/frontend.html)
 
-⚠️ Si vous utilisez symfony il faut utiliser le front-bundle (Lien à venir)
+⚠️ Si vous utilisez symfony il faut utiliser le [front-bundle](https://github.com/umanit/front-bundle)
 
 
 Pré-requis
@@ -28,18 +28,18 @@ Installation
 --------
 
 * Télécharger le [makefile](https://raw.githubusercontent.com/umanit/front-kit/master/Makefile) du repo et l'installer dans le projet cible
-Si le projet cible possède déjà un fichier make il faut fusionner les 2 
+Si le projet cible possède déjà un fichier `Makefile`, il faut fusionner les deux.
 
-* A la racine du projet cible lancer la commande 
+* À la racine du projet cible lancer la commande 
 ```make init front```
 
-⚠️ Attention si votre projet possède déjà un fichier package.json à la racine du projet l'installation ne va pas fonctionner
+⚠️ Attention si votre projet possède déjà un fichier `package.json` à la racine du projet l'installation ne va pas fonctionner
 Dans ce cas il faut un merge des deux fichiers 
 
 Utilisation
 --------
 
-L'installation va créer à la racine du projet un dossier assets 
+L'installation va créer à la racine du projet un dossier `assets` :
 
 ```
 scss -> les fichiers styles
@@ -49,7 +49,7 @@ images -> les images du site
 js -> les fichiers javascript du site
 ```
 
-Le fichier app.js possède un exemple d'utilisation 
+Le fichier `app.js` possède un exemple d'utilisation.
 
 Pour compiler les assets du site : 
 
@@ -57,7 +57,7 @@ Pour compiler les assets du site :
 docker-compose exec node yarn run dev
 ```
 
-Pour compiler et ecouter les assets du site : 
+Pour compiler et écouter les assets du site : 
 
 ```
 docker-compose exec node yarn run watch
