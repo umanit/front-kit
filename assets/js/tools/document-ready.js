@@ -3,7 +3,7 @@
  * S'il est nécessaire d'attendre que le DOM ait fini de charger
  *
  * Usage :
- * window.addEventListener("scroll", debounce(fonction));
+ * ready(() => console.log("DOM is ready!"));
  ********************************************************************************/
 
 export default (callback) => {
