@@ -1,19 +1,5 @@
-# Netbeans
-/nbproject
-# PhpStorm
-/.idea
-
 # NPM, Bower, Gulp
 /node_modules
 /bower_components
 /.sass-cache
 npm-debug.log
-# Docker
-docker-compose.override.yaml
-
-###> symfony/webpack-encore-bundle ###
-/node_modules/
-/public/build/
-npm-debug.log
-yarn-error.log
-###< symfony/webpack-encore-bundle ###
