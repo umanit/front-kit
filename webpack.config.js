@@ -1,5 +1,5 @@
 let Encore = require('@symfony/webpack-encore');
-let glob = require('glob');
+let glob = require('glob-all');
 
 let assetPath = './assets';
 
