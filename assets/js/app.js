@@ -3,6 +3,7 @@
 import breakpoints from './tools/breakpoints';
 import debounce from './tools/debounce';
 import ready from './tools/document-ready';
+import '../scss/style.scss';
 
 console.log(breakpoints);
 

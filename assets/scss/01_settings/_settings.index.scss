@@ -15,9 +15,12 @@
  * Colors...............Manage project's color palette.
  * Fonts................Set up project's font variables.
  * Grid.................Set up and name breakpoints.
+ * Media Queries........Configure media queries
  * Paths................Global paths of the project.
+ * Spacings.............Set up project spacings.
  */
 @import "settings.colors";
 @import "settings.fonts";
 @import "settings.grid";
 @import "settings.paths";
+@import "settings.spacing";

@@ -10,26 +10,14 @@
   width: auto !important;
 }
 
-$i: 0;
-@while $i <= 100 {
-  $unit: $i*0.01;
-  .u-w-#{$i} { width: percentage($unit) !important; }
-  $i: $i + 5;
-}
-
-
-// ==========================================================================
-// Media Queries
-// ==========================================================================
-
-@each $media-query in $media-queries{
-
-  @include media-breakpoint-up(#{$media-query}){
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
     $i: 0;
     @while $i <= 100 {
       $unit: $i*0.01;
-      .u-w-#{$media-query}-#{$i} { width: percentage($unit) !important; }
+      .u-w#{$infix}-#{$i} { width: percentage($unit) !important; }
       $i: $i + 5;
     }
   }

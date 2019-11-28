@@ -8,52 +8,31 @@
  * `.u-ml-md-25` (margin-left 25px, within md media-query), `.u-pr-xs-10` (padding-right 10px, within xs media-query)
 */
 
-@each $space in $spaces{
-  // margins
-  .u-ma-#{$space} { margin: #{$space}px !important; }
-  .u-my-#{$space} { margin-top: #{$space}px !important; margin-bottom: #{$space}px !important; }
-  .u-mx-#{$space} { margin-left: #{$space}px !important; margin-right: #{$space}px !important; }
-  .u-mt-#{$space} { margin-top: #{$space}px !important; }
-  .u-mb-#{$space} { margin-bottom: #{$space}px !important; }
-  .u-ml-#{$space} { margin-left: #{$space}px !important; }
-  .u-mr-#{$space} { margin-right: #{$space}px !important; }
-  // paddings
-  .u-pa-#{$space} { padding: #{$space}px !important; }
-  .u-py-#{$space} { padding-top: #{$space}px !important; padding-bottom: #{$space}px !important; }
-  .u-px-#{$space} { padding-left: #{$space}px !important; padding-right: #{$space}px !important; }
-  .u-pt-#{$space} { padding-top: #{$space}px !important; }
-  .u-pb-#{$space} { padding-bottom: #{$space}px !important; }
-  .u-pl-#{$space} { padding-left: #{$space}px !important; }
-  .u-pr-#{$space} { padding-right: #{$space}px !important; }
-}
+@each $breakpoint in map-keys($grid-breakpoints) {
 
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
-// ==========================================================================
-// Media Queries
-// ==========================================================================
-
-@each $media-query in $media-queries{
-
-  @include media-breakpoint-up(#{$media-query}){
-
-    @each $space in $spaces{
+    $i: 0;
+    @while $i <= $spaces {
       // margins
-      .u-ma-#{$media-query}-#{$space} { margin: #{$space}px !important; }
-      .u-my-#{$media-query}-#{$space} { margin-top: #{$space}px !important; margin-bottom: #{$space}px !important; }
-      .u-mx-#{$media-query}-#{$space} { margin-left: #{$space}px !important; margin-right: #{$space}px !important; }
-      .u-mt-#{$media-query}-#{$space} { margin-top: #{$space}px !important; }
-      .u-mb-#{$media-query}-#{$space} { margin-bottom: #{$space}px !important; }
-      .u-ml-#{$media-query}-#{$space} { margin-left: #{$space}px !important; }
-      .u-mr-#{$media-query}-#{$space} { margin-right: #{$space}px !important; }
-      // paddings
-      .u-pa-#{$media-query}-#{$space} { padding: #{$space}px !important; }
-      .u-py-#{$media-query}-#{$space} { padding-top: #{$space}px !important; padding-bottom: #{$space}px !important; }
-      .u-px-#{$media-query}-#{$space} { padding-left: #{$space}px !important; padding-right: #{$space}px !important; }
-      .u-pt-#{$media-query}-#{$space} { padding-top: #{$space}px !important; }
-      .u-pb-#{$media-query}-#{$space} { padding-bottom: #{$space}px !important; }
-      .u-pl-#{$media-query}-#{$space} { padding-left: #{$space}px !important; }
-      .u-pr-#{$media-query}-#{$space} { padding-right: #{$space}px !important; }
+      .u-ma#{$infix}-#{$i} { margin: #{$i}px !important; }
+      .u-my#{$infix}-#{$i} { margin-top: #{$i}px !important; margin-bottom: #{$i}px !important; }
+      .u-mx#{$infix}-#{$i} { margin-left: #{$i}px !important; margin-right: #{$i}px !important; }
+      .u-mt#{$infix}-#{$i} { margin-top: #{$i}px !important; }
+      .u-mb#{$infix}-#{$i} { margin-bottom: #{$i}px !important; }
+      .u-ml#{$infix}-#{$i} { margin-left: #{$i}px !important; }
+      .u-mr#{$infix}-#{$i} { margin-right: #{$i}px !important; }
+      // padding-
+      .u-pa#{$infix}-#{$i} { padding: #{$i}px !important; }
+      .u-py#{$infix}-#{$i} { padding-top: #{$i}px !important; padding-bottom: #{$i}px !important; }
+      .u-px#{$infix}-#{$i} { padding-left: #{$i}px !important; padding-right: #{$i}px !important; }
+      .u-pt#{$infix}-#{$i} { padding-top: #{$i}px !important; }
+      .u-pb#{$infix}-#{$i} { padding-bottom: #{$i}px !important; }
+      .u-pl#{$infix}-#{$i} { padding-left: #{$i}px !important; }
+      .u-pr#{$infix}-#{$i} { padding-right: #{$i}px !important; }
+
+      $i: $i + 5;
     }
   }
-
 }
