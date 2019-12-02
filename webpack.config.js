@@ -19,7 +19,7 @@ let entryArray = glob.sync(
 
 for (let x in entryArray) {
     let name = entryArray[x].split('/').pop();
-    Encore.addEntry('js/' + name.replace('.js', ''), entryArray[x]);
+    Encore.addEntry(name.replace('.js', ''), entryArray[x]);
 }
 
 Encore
