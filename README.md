@@ -27,11 +27,14 @@ services:
 Installation
 --------
 
+* Avoir lancé docker 
+```docker-compose up```
+
 * Télécharger le [makefile](https://raw.githubusercontent.com/umanit/front-kit/master/Makefile) du repo et l'installer dans le projet cible
 Si le projet cible possède déjà un fichier `Makefile`, il faut fusionner les deux.
 
 * À la racine du projet cible lancer la commande 
-```make init front```
+```make init-front```
 
 ⚠️ Attention si votre projet possède déjà un fichier `package.json` à la racine du projet l'installation ne va pas fonctionner
 Dans ce cas il faut un merge des deux fichiers 
