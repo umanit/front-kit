@@ -4,10 +4,11 @@ EXEC=docker-compose exec
 init-front :
 	mkdir temp
 	wget -P temp "https://github.com/umanit/front-kit/archive/master.zip"
-	unzip temp/master.zip
-	mv -r temp/assets ../
-	mv -n temp/package.json ../
-	mv -n temp/postcss.config.js ../
-	mv temp/webpack.config.js ../
-	mv -n temp/.editorconfig ../
+	unzip temp/master.zip -d temp
+	mv temp/front-kit-master/assets .
+	mv -n temp/front-kit-master/package.json .
+	mv -n temp/front-kit-master/postcss.config.js .
+	mv temp/front-kit-master/webpack.config.js .
+	mv -n temp/front-kit-master/.editorconfig .
+	rm -rf temp
 	$(EXEC) node yarn install
