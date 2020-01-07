@@ -6,8 +6,13 @@
  * ready(() => console.log("DOM is ready!"));
  ********************************************************************************/
 
-export default (callback) => {
-    if (document.readyState != "loading") callback();
-    else document.addEventListener("DOMContentLoaded", callback);
+export default callback => {
+    if (
+        document.readyState === "complete" ||
+        (document.readyState !== "loading" && !document.documentElement.doScroll)
+    ) {
+        callback();
+    } else {
+        document.addEventListener("DOMContentLoaded", callback);
+    }
 }
-
