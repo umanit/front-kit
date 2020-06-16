@@ -49,7 +49,22 @@ ul {
 }
 ```
 
-* **05_objects** - Classes non esthétiques ou sans style spécifique, plutôt relatives à la structure/positionnement/comportement des éléments dans la page (wrappers, grid, list, etc.).
+
+* **05_vendors** - Classes relatives aux librairies externes que l'on souhaite surcharger (Bootstrap, slick, recaptcha...).
+Il s'agit des classes uniquement. Les variables à surcharger doivent rester dans `01_settings`.
+
+Ex : dans `_vendors.bootstrap-nav-tabs.scss`
+
+```
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-item.show .nav-link {
+    color: $primary;
+    background-color: transparent;
+}
+```
+
+
+* **06_objects** - Classes non esthétiques ou sans style spécifique, plutôt relatives à la structure/positionnement/comportement des éléments dans la page (wrappers, grid, list, etc.).
 Elles portent un nom agnostique :  
 ```
 .o-list {
@@ -63,7 +78,7 @@ Elles portent un nom agnostique :
 }
 ```
 
-* **06_components** - Classes esthétiques pour styliser tous les éléments de la page (souvent combinés avec la structure des classes d'objects).
+* **07_components** - Classes esthétiques pour styliser tous les éléments de la page (souvent combinés avec la structure des classes d'objects).
 Les classes sont nommées spécifiquement :  
 ```
 .c-products-list {
@@ -76,7 +91,7 @@ Les classes sont nommées spécifiquement :
 }
 ```
 
-* **07_utilities** - Styles les plus spécifiques. Classes utilitaires permettant de remplacer tout ce qui précède. C'est le seul endroit où ```!important``` est autorisé. :-)
+* **08_utilities** - Styles les plus spécifiques. Classes utilitaires permettant de remplacer tout ce qui précède. C'est le seul endroit où ```!important``` est autorisé. :-)
 ```
 .u-one-half {
   width: 50% !important;
@@ -99,6 +114,6 @@ Il s’agit de **préfixer les noms de classes** avec la première lettre du typ
 
 ### Utilisation du JS
 
-Pour les éléments qui seraient **impactés par du JS**, utiliser un **data-attribute** plutôt qu'une classe :
+Pour les éléments qui seraient **impactés par du JS**, utiliser un préfixe **js-** plutôt qu'un data-attribute (par souci de performance) :
 
-* ```data-[name]``` — pour les hooks javascript (pas de styles)
+* ```js-[name]``` — pour les hooks javascript (pas de styles)
