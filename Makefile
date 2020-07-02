@@ -1,5 +1,5 @@
 # Makefile pour compilation de tâches. Customize as you wish!
-EXEC=docker-compose exec
+EXEC=nvm exec
 # A lancer qu'une fois en début de projet
 init-front :
 	mkdir temp
@@ -11,4 +11,4 @@ init-front :
 	mv temp/front-kit-master/webpack.config.js .
 	mv -n temp/front-kit-master/.editorconfig .
 	rm -rf temp
-	$(EXEC) node yarn install
+	$(EXEC) yarn install

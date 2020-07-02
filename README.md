@@ -11,24 +11,10 @@ Il s'appuie sur [webpack encore](https://symfony.com/doc/current/frontend.html)
 Pré-requis
 --------
 
-* Avoir dockerisé node dans le projet cible
-
-```
-services:
-  node:
-    image: node:12
-    working_dir: /var/www/html
-    user: node
-    tty: true
-    volumes:
-      - .:/var/www/html:delegated
-```
+* Avoir [yarn](https://yarnpkg.com/) d'installé 
 
 Installation
 --------
-
-* Avoir lancé docker 
-```docker-compose up```
 
 * Télécharger le [makefile](https://raw.githubusercontent.com/umanit/front-kit/master/Makefile) du repo et l'installer dans le projet cible
 Si le projet cible possède déjà un fichier `Makefile`, il faut fusionner les deux.
@@ -52,22 +38,22 @@ images -> les images du site
 js -> les fichiers javascript du site
 ```
 
-Le fichier `app.js` possède un exemple d'utilisation.
+Le fichier `app.js` importe les styles
 
 Pour compiler les assets du site : 
 
 ```
-docker-compose exec node yarn run dev
+nvm exec yarn dev
 ```
 
 Pour compiler et écouter les assets du site : 
 
 ```
-docker-compose exec node yarn run watch
+nvm exec yarn watch
 ```
 
 Pour compiler les assets pour la prod
 
 ```
-docker-compose exec node yarn build
+nvm exec yarn build
 ```

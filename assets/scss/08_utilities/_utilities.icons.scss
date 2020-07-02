@@ -1,0 +1,53 @@
+// ==========================================================================
+// Icons
+// ==========================================================================
+
+.u-icon svg {
+  width: 100% !important;
+  height: 100% !important;
+
+  vertical-align: top !important;
+}
+
+/* Size variants
+   ========================================================================== */
+
+.u-icon--fixed-xxs svg {
+  width: rem(15) !important;
+  height: rem(15) !important;
+}
+
+.u-icon--fixed-xs svg {
+  width: rem(20) !important;
+  height: rem(20) !important;
+}
+
+.u-icon--fixed-sm svg {
+  width: rem(30) !important;
+  height: rem(30) !important;
+}
+
+.u-icon--fixed svg {
+  width: rem(40) !important;
+  height: rem(40) !important;
+}
+
+.u-icon--fixed-md svg {
+  width: rem(50) !important;
+  height: rem(50) !important;
+}
+
+.u-icon--fixed-lg svg {
+  width: rem(60) !important;
+  height: rem(60) !important;
+}
+
+.u-icon--fixed-xl svg {
+  width: rem(80) !important;
+  height: rem(80) !important;
+}
+
+.u-icon--fixed-xxl svg {
+  width: rem(130) !important;
+  height: rem(130) !important;
+}
