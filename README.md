@@ -11,6 +11,7 @@ Il s'appuie sur [webpack encore](https://symfony.com/doc/current/frontend.html)
 Pré-requis
 --------
 
+* Avoir [nvm](https://github.com/nvm-sh/nvm) avec node 14
 * Avoir [yarn](https://yarnpkg.com/) d'installé 
 
 Installation

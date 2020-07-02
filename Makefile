@@ -1,5 +1,7 @@
 # Makefile pour compilation de tâches. Customize as you wish!
-EXEC=nvm exec
+define init_nvm
+	source ~/.nvm/nvm.sh
+endef
 # A lancer qu'une fois en début de projet
 init-front :
 	mkdir temp
@@ -11,4 +13,5 @@ init-front :
 	mv temp/front-kit-master/webpack.config.js .
 	mv -n temp/front-kit-master/.editorconfig .
 	rm -rf temp
-	$(EXEC) yarn install
+	@$(call init_nvm); \
+	nvm exec yarn install; \
