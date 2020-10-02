@@ -1,0 +1,52 @@
+// ==========================================================================
+// Utilities - Grids
+// ==========================================================================
+
+/*
+ * Useful classes for grid relatives to the project, taking account media queries.
+ * ex: `.u-grid-1` (grid-template-columns: repeat(1, 1fr), `.u-grid-lg-6` (6 columns, within lg media-query)
+*/
+
+/* /!\ Définir $columns dans 01_settings.grid /!\ */
+
+.u-grid {
+  display: grid;
+}
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    .u-grid-order#{$infix}-last {
+      order: calc(#{$columns} + 1);
+    }
+
+    .u-grid-order#{$infix}-first {
+      order: -1;
+    }
+
+    @for $numerator from 1 through $columns {
+      .u-grid#{$infix}-#{$numerator} {
+        grid-template-columns: repeat(#{$numerator}, 1fr) !important;
+      }
+
+      .u-grid-span#{$infix}-#{$numerator} {
+        grid-column: span #{$numerator} !important;
+      }
+
+      .u-grid-order#{$infix}-#{$numerator} {
+        order: #{$numerator} !important;
+      }
+    }
+
+    $i: 0;
+    @while $i <= 100 {
+      $unit: $i*0.01;
+      .u-grid-row-gap#{$infix}-#{$i} { grid-row-gap: #{$i}px !important; }
+      .u-grid-column-gap#{$infix}-#{$i} { grid-column-gap: #{$i}px !important; }
+      $i: $i + 5;
+    }
+  }
+}
+
+
