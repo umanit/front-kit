@@ -9,13 +9,13 @@
 
 /* /!\ Définir $columns dans 01_settings.grid /!\ */
 
-.u-grid {
-  display: grid;
-}
-
 @each $breakpoint in map-keys($grid-breakpoints) {
   @include media-breakpoint-up($breakpoint) {
     $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    .u#{$infix}-grid {
+      display: grid;
+    }
 
     .u-grid-order#{$infix}-last {
       order: calc(#{$columns} + 1);
