@@ -8,7 +8,7 @@
     "postcss-loader": "^3.0.0",
     "purgecss-webpack-plugin": "^2.2.0",
     "sass-loader": "^8.0.0",
-    "@umanit/tools": "^1.0.1"
+    "@umanit/tools": "^1.0.2"
   },
   "scripts": {
     "dev-server": "encore dev-server",
