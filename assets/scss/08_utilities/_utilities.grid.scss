@@ -5,6 +5,26 @@
 /*
  * Useful classes for grid relatives to the project, taking account media queries.
  * ex: `.u-grid-1` (grid-template-columns: repeat(1, 1fr), `.u-grid-lg-6` (6 columns, within lg media-query)
+ * `.u-grid-column-2-4` (grid-column: 2 / 4), `.u-grid-column-lg-6-12` (grid-column: 6 / 12, within lg media-query)
+
+  For example grid Boostrap equivalent
+  <div class="u-grid u-grid-12 u-grid-column-gap-30">
+    <article class="u-grid-span-6">
+      article 1
+    </article>
+
+    <article class="u-grid-span-3">
+      article 2
+    </article>
+
+    <article class="u-grid-span-3">
+      article 3
+    </article>
+
+    <article class="u-grid-span-4">
+      article 4
+    </article>
+  </div>
 */
 
 /* /!\ Définir $columns dans 01_settings.grid /!\ */
@@ -37,6 +57,16 @@
       .u-grid-order#{$infix}-#{$numerator} {
         order: #{$numerator} !important;
       }
+
+      @for $fraction from ($numerator - 1) through ($columns + 1) {
+        .u-grid-column#{$infix}-#{$numerator - 1}-#{$fraction} {
+          grid-column: #{$numerator - 1}/#{$fraction} !important;
+        }
+      }
+    }
+
+    .u-grid-column#{$infix}-#{$columns}-#{$columns + 1} {
+      grid-column: #{$columns}/#{$columns + 1} !important;
     }
 
     $i: 0;
