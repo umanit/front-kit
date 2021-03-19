@@ -1,13 +1,15 @@
 {
   "devDependencies": {
-    "@symfony/webpack-encore": "^0.30.2",
-    "bootstrap": "^4.5.0",
-    "core-js": "^3.6.5",
-    "glob-all": "^3.1.0",
-    "sass": "^1.26.9",
-    "postcss-loader": "^3.0.0",
-    "purgecss-webpack-plugin": "^2.2.0",
-    "sass-loader": "^8.0.0",
+    "@symfony/webpack-encore": "^1.1.2",
+    "bootstrap": "^4.6.0",
+    "core-js": "^3.9.1",
+    "glob-all": "^3.2.1",
+    "sass": "^1.32.8",
+    "postcss-loader": "^5.2.0",
+    "postcss": "^8.2.8",
+    "file-loader": "^6.0.0",
+    "purgecss-webpack-plugin": "^4.0.2",
+    "sass-loader": "^11.0.1",
     "@umanit/tools": "^1.0.3"
   },
   "scripts": {
@@ -21,7 +23,7 @@
     "yarn": ">= 1.22.0"
   },
   "dependencies": {
-    "autoprefixer": "^9.8.0"
+    "autoprefixer": "^10.2.5"
   },
   "browserslist": [
     "defaults",
