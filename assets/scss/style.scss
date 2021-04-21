@@ -19,16 +19,6 @@
 /* Tools layer */
 @import "02_tools/tools.0-index";
 
-// ==========================================================================
-// Frameworks
-// ==========================================================================
-// Option 1: Include full Bootstrap here, in order to be able to override its variables
-@import '~bootstrap/scss/bootstrap';
-
-// Option 2: Include only parts of Bootstrap
-// @link https://getbootstrap.com/docs/4.1/getting-started/theming/
-
-
 /* Generic layer */
 @import "03_generic/generic.0-index";
 

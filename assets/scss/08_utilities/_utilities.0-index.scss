@@ -15,12 +15,16 @@
  * CONTENTS
  *
  * UTILITIES
+ * Colors...............color utilities
+ * Display..............display utilities
  * Grid.................grid utilities
  * Fonts................fonts utilities
  * Fonts................icons utilities
  * Spacing..............Margin/padding utilities classes
  * Width................Width utilities classes
  */
+@import "utilities.colors";
+@import "utilities.flex";
 @import "utilities.grid";
 @import "utilities.fonts";
 @import "utilities.icons";

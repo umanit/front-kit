@@ -11,9 +11,11 @@
  * CONTENTS
  *
  * TOOLS
+ * Breakpoints.................A mixin which generates breakpoints utilities (imported from bootstrap)
  * Font-face...................A mixin which generates font face : https://gist.github.com/jonathantneal/d0460e5c2d5d7f9bc5e6
  * Font-size...................A function which converts pixels to rem.
  */
 
+@import "tools.breakpoints";
 @import "tools.font-face";
 @import "tools.font-size";

@@ -1,0 +1,16 @@
+// ==========================================================================
+// Utilities - Colors
+// ==========================================================================
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+    @each $color, $colorValue in $colors {
+      .u-color#{$infix}-#{$color} { color: #{$colorValue} !important; }
+      .u-bg#{$infix}-#{$color} { background-color: #{$colorValue} !important; }
+    }
+  }
+}
+
+
+
