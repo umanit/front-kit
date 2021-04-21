@@ -14,6 +14,7 @@
  *
  * COMPONENTS
  * Buttons...............Define all buttons styles.
+ * Container.............Define all container styles.
  * Forms.................Define specific forms styles.
  * Footer................Define footer style.
  * Header................Define header styles.
@@ -23,6 +24,7 @@
  */
 
 @import "components.buttons";
+@import "components.container";
 @import "components.forms";
 @import "components.footer";
 @import "components.header";

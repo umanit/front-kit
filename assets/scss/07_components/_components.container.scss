@@ -1,0 +1,9 @@
+.c-container {
+  $self: &;
+  @include make-container();
+  @include make-container-max-widths();
+}
+
+.c-container-fluid {
+  @include make-container();
+}

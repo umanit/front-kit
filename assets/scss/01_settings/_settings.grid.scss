@@ -17,15 +17,15 @@ $grid-breakpoints: map-merge(
   $grid-breakpoints
 );
 
-//$container-max-widths: ();
-//$container-max-widths: map-merge(
-//  (
-//    sm: 540px,
-//    md: 720px,
-//    lg: 960px,
-//    xxl: 1280px
-//  ),
-//  $container-max-widths
-//);
+$container-max-widths: ();
+$container-max-widths: map-merge(
+  (
+    sm: 540px,
+    md: 720px,
+    lg: 960px,
+    xxl: 1280px
+  ),
+  $container-max-widths
+);
 
 $columns: 12 !default;
