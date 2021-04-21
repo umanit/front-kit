@@ -1,0 +1,16 @@
+// ==========================================================================
+// Export - Colors
+// ==========================================================================
+
+/*
+ * Use colors in Javascript
+ * import colors from 'path/to/file/scss/09_export/_export.colors.scss';
+*/
+
+@import "../01_settings/settings.colors";
+
+@each $color, $colorValue in $colors {
+  :export {
+    #{$color}: $colorValue;
+  }
+}
