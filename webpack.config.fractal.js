@@ -5,16 +5,16 @@ let assetPath = './assets';
 
 Encore
 // directory where compiled assets will be stored
-  .setOutputPath('public/build/front')
+  .setOutputPath('public/build/fractal')
   // public path used by the web server to access the output path
-  .setPublicPath('/build/front')
+  .setPublicPath('/build/fractal')
 // only needed for CDN's or sub-directory deploy
 //.setManifestKeyPrefix('build/')
 ;
 
 // Ajout des entrées JS dynamiquement
 let entryArray = glob.sync(
-  assetPath + '/js/{!(fractal.js|tools),!(tools)/**/*.js}',
+  assetPath + '/js/fractal.js',
 );
 
 for (let x in entryArray) {

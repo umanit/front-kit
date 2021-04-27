@@ -1,21 +1,25 @@
 {
   "devDependencies": {
+    "@frctl/fractal": "^1.5.6",
+    "@frctl/twig": "^1.2.8",
     "@symfony/webpack-encore": "^1.1.2",
+    "@umanit/tools": "^1.0.3",
     "core-js": "^3.9.1",
-    "glob-all": "^3.2.1",
-    "sass": "^1.32.8",
-    "postcss-loader": "^5.2.0",
-    "postcss": "^8.2.8",
     "file-loader": "^6.0.0",
+    "glob-all": "^3.2.1",
+    "postcss": "^8.2.8",
+    "postcss-loader": "^5.2.0",
     "purgecss-webpack-plugin": "^4.0.2",
-    "sass-loader": "^11.0.1",
-    "@umanit/tools": "^1.0.3"
+    "sass": "^1.32.8",
+    "sass-loader": "^11.0.1"
   },
   "scripts": {
     "dev-server": "encore dev-server",
     "dev": "encore dev",
     "watch": "encore dev --watch",
-    "build": "encore production --no-stats"
+    "build": "encore production --no-stats",
+    "fractal-assets": "encore dev --watch --config=webpack.config.fractal.js",
+    "fractal-server": "fractal start --sync"
   },
   "engines": {
     "npm": "please-use-yarn",
