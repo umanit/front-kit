@@ -11,8 +11,6 @@ init-front :
 	mv -n temp/front-kit-master/package.json .
 	mv -n temp/front-kit-master/postcss.config.js .
 	mv temp/front-kit-master/webpack.config.js .
-	mv temp/front-kit-master/.nvmrc .
-	mv temp/front-kit-master/.npmrc .
 	mv -n temp/front-kit-master/.editorconfig .
 	rm -rf temp
 	@$(call init_nvm); \
