@@ -1,15 +1,15 @@
 {
   "devDependencies": {
-    "@symfony/webpack-encore": "^1.1.2",
+    "@symfony/webpack-encore": "^1.8.1",
     "bootstrap": "^4.6.0",
-    "core-js": "^3.9.1",
+    "core-js": "^3.20.3",
     "glob-all": "^3.2.1",
-    "sass": "^1.32.8",
-    "postcss-loader": "^5.2.0",
-    "postcss": "^8.2.8",
-    "file-loader": "^6.0.0",
-    "purgecss-webpack-plugin": "^4.0.2",
-    "sass-loader": "^11.0.1",
+    "sass": "^1.49.0",
+    "postcss-loader": "^6.2.1",
+    "postcss": "^8.4.5",
+    "file-loader": "^6.2.0",
+    "purgecss-webpack-plugin": "^4.1.3",
+    "sass-loader": "^12.4.0",
     "@umanit/tools": "^1.0.3"
   },
   "scripts": {
@@ -18,16 +18,16 @@
     "watch": "encore dev --watch",
     "build": "encore production --no-stats"
   },
-  "engines": {
-    "npm": "please-use-yarn",
-    "yarn": ">= 1.22.0"
-  },
   "dependencies": {
-    "autoprefixer": "^10.2.5"
+    "autoprefixer": "^10.4.2"
   },
   "browserslist": [
     "defaults",
     "not IE > 0",
     "not IE_Mob > 0"
-  ]
+  ],
+  "volta": {
+    "node": "17.4.0",
+    "yarn": "1.22.17"
+  }
 }
